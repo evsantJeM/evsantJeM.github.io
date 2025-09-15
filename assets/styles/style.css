@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); 
+/* Cardo, Cal Sans, Montserrat, Poppins */
+
+@font-face {
+  font-family: "Adumu Regular";
+  src: url("/assets/fonts/Adumu.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  /* background-image: url("/assets/images/background-paper-blue.jpg"); */
+  
+  background: linear-gradient(-45deg, #5281ee, #1d3473, #202f49, #2367d5);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: 200vw 200vh; */
+  animation: gradientAnimation 15s ease infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+main {
+  width: 65%;
+}
+
+p {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+}
+
+.h2-main {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: fixed;
+  bottom: 0px;
+
+  width: 100%;
+}
+
+.div-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.div-footer p {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  font-size: 0.75rem;
+  color: white;
+  
+  margin: 0.10rem 0;
+}
+
+.endereco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.endereco img {
+  width: 3%;
+  height: auto;
+}
+
+.iframe-endereco {
+  display: none;
+  margin: 200px auto;
+
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px white;
+}
+
+.goe-info-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+.img-max-div {
+  max-width: 300px;
+  max-height: 400px;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.goe-img {
+  border-radius: 10px;
+
+  width: 290px;
+  /* height: 300px; */
+}
