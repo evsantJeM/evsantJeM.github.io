@@ -1,176 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PASCOM - NSAP</title>
-    <link rel="icon" href="images/icons/pascom-icon.png" type="image/png">
+    <link rel="icon" href="images/icons/pascom-icon.png" type="image/png" />
 
     <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        background-color: rgb(0, 0, 0, 0.5);
+      }
+
+      main {
+        margin-top: 20px;
+      }
+
+      .links {
+        margin-top: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .links a img {
+        width: 80px;
+      }
+
+      .art-imgs {
+        /* display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 300px 150px; */
+        gap: 20px;
+      }
+
+      .box-imgs {
+        position: relative;
+
+        max-width: 100%;
+        height: 100px;
+
+        box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+        border-radius: 10px;
+
+        /* overflow-y: hidden; */
+      }
+
+      .imgs-main {
+        position: absolute;
+        /* top: -415px;
+        left: 10px; */
+
+        max-width: 200px;
+        height: auto;
+
+        z-index: 2;
+      }
+
+      .white {
+        background-color: white;
+      }
+
+      .black {
+        background-color: black;
+      }
+
+      .download-black {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        width: 50px;
+        height: auto;
+      }
+
+      .black .download-white {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        filter: invert(100%);
+        width: 50px;
+        height: auto;
+      }
+
+      @media screen and (max-width: 768px) {
         body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
         }
 
         main {
-            margin-top: 20px;
+          width: 90%;
         }
 
         .links {
-            margin-top: 10px;
+          margin-top: 10px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            gap: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          gap: 10px;
         }
 
         .links a img {
-            width: 50px;
+          width: 50px;
         }
 
         .art-imgs {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
         }
 
         .box-imgs {
-            position: relative;
+          position: relative;
 
-            max-width: 100%;
-            height: 100px;
+          max-width: 100%;
+          height: 100px;
 
-            box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
-            border-radius: 10px;
+          box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+          border-radius: 10px;
 
-            overflow-y: hidden;
+          overflow-y: hidden;
         }
 
         .imgs-main {
-            position: absolute;
-            top: -415px;
-            left: 10px;
+          position: absolute;
+          top: -415px;
+          left: 10px;
 
-            max-width: 300px;
-            height: auto;
+          max-width: 300px;
+          height: auto;
 
-            z-index: 2;
+          z-index: 2;
         }
 
         .white {
-            background-color: white;
+          background-color: white;
         }
 
         .black {
-            background-color: black;
+          background-color: black;
         }
 
         .download-black {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
 
-            width: 25px;
-            height: auto;
+          width: 25px;
+          height: auto;
         }
 
         .black .download-white {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
 
-            filter: invert(100%);
-            width: 25px;
-            height: auto;
+          filter: invert(100%);
+          width: 25px;
+          height: auto;
         }
-
-        @media screen and (max-width: 768px) {
-            body {
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                box-sizing: border-box;
-                overflow: hidden;
-            }
-
-            main {
-                width: 90%;
-            }
-
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
 
+  <body>
     <header>
-        <nav>
-            <div class="links">
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="images/icons/instagram-icon.svg" alt="instagram-icon">
-                </a>
+      <nav>
+        <div class="links">
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="images/icons/instagram-icon.svg" alt="instagram-icon" />
+          </a>
 
-                <a href="https://www.canva.com/" target="_blank">
-                    <img src="images/icons/canva-icon.svg" alt="canva-icon">
-                </a>
-            </div>
-        </nav>
+          <a href="https://www.canva.com/" target="_blank">
+            <img src="images/icons/canva-icon.svg" alt="canva-icon" />
+          </a>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section>
-            <article class="art-imgs">
-                <!-- <button>
+      <section>
+        <article class="art-imgs">
+          <!-- <button>
                         <img src="images/icons/expand-black.svg" alt="">
                     </button> -->
 
-                <div class="box-imgs white">
-                    <img src="images/capela-layout-deitado-black.svg" alt="capela-layout-deitado" class="imgs-main">
+          <div class="box-imgs white">
+            <img
+              src="images/capela-layout-deitado-black.svg"
+              alt="capela-layout-deitado"
+              class="imgs-main"
+            />
 
-                    <a href="images/capela-layout-deitado-black.svg">
-                        <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black">
-                    </a>
-                    
-                </div>
+            <a
+              href="images/capela-layout-deitado-black.svg"
+              download="capela-layout-deitado-black"
+            >
+              <img
+                src="images/icons/download-icon.svg"
+                alt="download-icon"
+                class="download-black"
+              />
+            </a>
+          </div>
 
-                <div class="box-imgs black">
-                    <img src="images/capela-layout-deitado-white.svg" alt="capela-layout-deitado" class="imgs-main">
+          <div class="box-imgs black">
+            <img
+              src="images/capela-layout-deitado-white.svg"
+              alt="capela-layout-deitado"
+              class="imgs-main"
+            />
 
-                    <a href="images/capela-layout-deitado-white.svg">
-                        <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white">
-                    </a>
-                </div>
+            <a href="images/capela-layout-deitado-white.svg"
+              download="capela-layout-deitado-white">
+              <img
+                src="images/icons/download-icon.svg"
+                alt="download-icon"
+                class="download-white"
+              />
+            </a>
+          </div>
 
-                <div class="box-imgs white">
-                    <img src="images/paroquia-layout-deitado-black.svg" alt="paroquia-layout-deitado" class="imgs-main">
+          <div class="box-imgs white">
+            <img
+              src="images/paroquia-layout-deitado-black.svg"
+              alt="paroquia-layout-deitado"
+              class="imgs-main"
+            />
 
-                    <a href="images/paroquia-layout-deitado-black.svg">
-                        <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black">
-                    </a>
-                    
-                </div>
+            <a href="images/paroquia-layout-deitado-black.svg"
+              download="paroquia-layout-deitado-black">
+              <img
+                src="images/icons/download-icon.svg"
+                alt="download-icon"
+                class="download-black"
+              />
+            </a>
+          </div>
 
-                <div class="box-imgs black">
-                    <img src="images/paroquia-layout-deitado-white.svg" alt="paroquia-layout-deitado" class="imgs-main">
+          <div class="box-imgs black">
+            <img
+              src="images/paroquia-layout-deitado-white.svg"
+              alt="paroquia-layout-deitado"
+              class="imgs-main"
+            />
 
-                    <a href="images/paroquia-layout-deitado-white.svg">
-                        <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white">
-                    </a>
-                </div>
-            </article>
-        </section>
+            <a href="images/paroquia-layout-deitado-white.svg"
+              download="paroquia-layout-deitado-white">
+              <img
+                src="images/icons/download-icon.svg"
+                alt="download-icon"
+                class="download-white"
+              />
+            </a>
+          </div>
+        </article>
+      </section>
     </main>
 
-    <footer>
-        
-    </footer>
+    <footer></footer>
 
-    <script>
-
-    </script>
-    
-</body>
+    <script></script>
+  </body>
 </html>
