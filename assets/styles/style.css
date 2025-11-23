@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Montserrat & Poppins*/
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    color: black;
+    text-align: justify;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    background: rgb(0, 0, 0, 0.9);
+
+    /* width: 100%; */
+}
+
+
+
+footer {
+    padding: 15px 15px 5px 15px;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.br-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        /* background: linear-gradient(to bottom, rgb(255, 255, 255, 0.8), rgb(255, 255, 255, 0.6), rgb(128, 66, 39), rgb(76, 39, 23)); */
+        /* background-color: rgb(76, 39, 23); */
+        background-color: white;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 90%;
+        padding: 5px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+        width: 75%;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s;
+
+        z-index: 1;
+    }
+
+    section {
+        margin: 20px 0px;
+    }
+
+    section,
+    article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu-click {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        transition: all 0.2s;
+    }
+
+    .burguer {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .cancel {
+        position: relative;
+        right: 17px;
+        top: 15px;
+
+        width: 25px;
+        height: auto;
+        display: none;
+        cursor: pointer;
+    }
+
+    .menu-title {
+        color: white;
+
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        text-align: left;
+    }
+
+    .box-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+
+        margin-top: -120px;
+    }
+
+    .box-links a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        color: white;
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        width: 90%;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255, 0.6);
+        border-bottom: 3px solid rgb(255, 255, 255, 0.4);
+
+        text-decoration: none;
+    }
+
+    .link-icon {
+        width: 18px;
+    }
+
+    .container-arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+        position: absolute;
+        bottom: 80px;
+    }
+
+    .container-arrows a img {
+        position: absolute;
+        right: 0px;
+        width: 60px;
+        height: auto;
+    }
+
+    .seta-link-top {
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    .seta-link-bottom {
+        margin-top: 10px;
+        transform: rotate(180deg);
+    }
+
+    .box-arrows-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;            
+    }
+
+    .box-arrows-link p {
+        font-size: 12px;
+        color: white;
+
+        background-color: rgb(255, 255, 255, 0.6);
+
+        position: relative;
+    }
+
+    .text-seta-topo {
+        text-align: right;
+        padding: 0px 10px 0px 60px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .text-seta-final {
+        padding: 0px 60px 0px 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #tabelaPrecos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    table {
+        /* width: 300px; */
+        width: 95%;
+
+        table-layout: fixed;
+
+        border-radius: 10px;
+        color: white;
+        border: 1px solid rgb(255, 255, 255, 0.6);
+    }
+
+    table th,
+    table td {
+        width: 50%;
+    }
+
+    table th {
+        padding: 15px;
+        
+        text-align: center;
+        font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    table td {
+        padding: 15px;
+        text-align: center;
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+
+
+
+    footer {
+        width: 100%;
+        background-color: rgb(0, 0, 0, 0.8);
+    }
+
+    .footer-infos {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .dpz-icon { 
+        margin-top: -80px;     
+        margin-left: -10px;  
+        width: 70px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .footer-infos ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .footer-infos ul li {
+        list-style-type: none;
+    }
+
+    .footer-infos .li-insta {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-infos ul li a img {
+        width: 30px;
+        margin-left: 5px;
+        height: auto;
+    }
+
+    .footer-infos .insta-icon {
+        width: 30px;
+        margin-left: 5px;
+        height: auto;
+    }
+
+    .footer-infos ul li a {
+        text-decoration: none;
+        text-align: right;
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 0px;
+    }
+
+    .copy {
+        margin-top: 30px;
+
+        color: white;
+        letter-spacing: 1.1px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .br-mobile {
+        display: block;
+    }
+}
